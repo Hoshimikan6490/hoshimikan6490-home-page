@@ -16,7 +16,7 @@
         height: 85%;
     }
 
-    .header {
+    header {
         background-color: black;
         position: fixed;
         z-index: 100;
@@ -38,34 +38,69 @@
     main {
         padding-top: 60px;
     }
+
+    .sns_logos {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    footer {
+        background-color: rgb(200, 200, 200);
+        margin-top: 10px;
+        padding: 10px;
+    }
+
+    .footer_contents {
+        display: flex;
+        width: 50%;
+        max-width: 1600px;
+        min-width: 500px;
+        margin: 0 auto;
+        padding: 0 20px;
+        justify-content: center;
+        align-items: center;
+    }
 </style>
 
 <body>
-    <header class="header">
+    <header>
         <a href="/" class="logo_img"><img src="./images/logo.png" style="height: 100%;" alt="私のアイコン"></a>
-        <a href="/" class="logo">Hoshimikan6490</a>
+        <a href="/" class="logo">
+            <h1>Hoshimikan6490</h1>
+        </a>
     </header>
 
     <main>
-        <div></div>
+        <div>
+            <h1>プロフィール</p>
+        </div>
+        <div>
+            <h1>執筆した記事</h1>
+        </div>
+        <div>
+            <h1>経歴</h2>
+        </div>
+        <div>
+            <h1>連絡先</h1>
+        </div>
     </main>
 
     <footer>
         <div class="footer_contents">
-            <div class="footer_links">
-                <p><a>記事一覧</a></p>
-                <p><a>私たちについて</a></p>
-                <p><a>この記事を執筆する際に使用している(またはおすすめの)リソースパック</a></p>
-                <p><a>利用規約</a>と<a>プライバシーポリシー</a></p>
-                <p><a>お問い合わせ</a></p>
-            </div>
-            <div class="footer_about_this">
-                <p>連絡方法</p>
-                <ul>
-                    <li><a>Webから</a>(原則この方法をご利用ください。)</li>
-                    <li><a>mc.edu.wiki[a]gmail.com</a>([a]をアットマークに置き換えてご利用ください。また、このプロジェクトが発足した当時に取得したアドレスのため、アカウント名がportalではなくwikiとなっております。ご注意ください。)
-                    </li>
-                </ul>
+            <img src="./images/logo.png" style="width: 15%;" alt="私のアイコン">
+            <div style="margin-left: 20px;">
+                <h1>Hoshimikan6490</h1>
+                <div class="sns_logos">
+                    <a href="https://twitter.com/hoshimikan6490" target="_blank" rel="noopener noreferrer"><img
+                            src="./images/twitter_logo.svg" style="width: 50px;"></a>
+                    <a href="https://www.instagram.com/hoshimikan6490" target="_blank" rel="noopener noreferrer"><img
+                            src="./images/instagram_logo.svg" style="width: 50px;"></a>
+                    <a href="https://www.youtube.com/@Hoshimikan6490" target="_blank" rel="noopener noreferrer"><img
+                            src="./images/youtube_logo.svg" style="width: 50px;"></a>
+                    <a href="https://note.com/hoshimikan6490" target="_blank" rel="noopener noreferrer"><img
+                            src="./images/note_logo.svg" style="width: 50px;"></a>
+                </div>
             </div>
         </div>
         <small>© Hoshimikan6490 2023</small>
