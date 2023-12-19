@@ -5,7 +5,7 @@ app.use(express.static("../images"));
 app.use("/images", express.static("../images"));
 
 app.get("/", async function (req, res) {
-  res.sendFile("./index.html");
+  res.sendFile(__dirname + "/index.html");
 });
 
 app.listen(8080, function () {
