@@ -17,7 +17,7 @@
     }
 
     header {
-        background-color: black;
+        background-color: rgb(109, 109, 109);
         position: fixed;
         z-index: 100;
         width: 100%;
@@ -25,6 +25,7 @@
         display: flex;
         align-items: center;
         border-bottom: 1px solid #ccc;
+        padding: 10px;
     }
 
     .logo {
@@ -39,23 +40,7 @@
         padding-top: 60px;
         padding-left: 10%;
         padding-right: 10%;
-    }
-
-    .sns_logos {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    footer {
-        background-color: rgb(200, 200, 200);
-        margin-top: 10px;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-        text-align: center;
+        padding-bottom: 40px;
     }
 
     .profile_contents {
@@ -67,6 +52,33 @@
         padding: 0 20px;
         justify-content: center;
         align-items: center;
+    }
+
+    .sns_logos {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+
+    .waku {
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #333333;
+        border-radius: 10px;
+        width: 50%;
+        max-width: 1600px;
+        min-width: 500px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    footer {
+        background-color: rgb(200, 200, 200);
+        padding-top: 10px;
+        padding-bottom: 10px;
+        width: 100%;
+        text-align: center;
     }
 </style>
 
@@ -81,40 +93,52 @@
     <main>
         <div>
             <h1>プロフィール</h1>
-                <div class="profile_contents">
-                    <img src="./images/logo.png" style="width: 15%;" alt="私のアイコン">
-                    <div style="margin-left: 20px;">
-                        <h1>Hoshimikan6490</h1>
-                        <div class="sns_logos">
-                            <a href="https://twitter.com/hoshimikan6490" target="_blank" rel="noopener noreferrer"><img
-                                    src="./images/twitter_logo.svg" style="width: 50px;"></a>
-                            <a href="https://www.instagram.com/hoshimikan6490" target="_blank"
-                                rel="noopener noreferrer"><img src="./images/instagram_logo.svg"
-                                    style="width: 50px;"></a>
-                            <a href="https://www.youtube.com/@Hoshimikan6490" target="_blank"
-                                rel="noopener noreferrer"><img src="./images/youtube_logo.svg" style="width: 50px;"></a>
-                            <a href="https://note.com/hoshimikan6490" target="_blank" rel="noopener noreferrer"><img
-                                    src="./images/note_logo.svg" style="width: 50px;"></a>
-                        </div>
+            <div class="profile_contents">
+                <img src="./images/logo.png" style="width: 15%;" alt="私のアイコン">
+                <div style="margin-left: 20px;">
+                    <h1>Hoshimikan6490</h1>
+                    <div class="sns_logos">
+                        <a href="https://twitter.com/hoshimikan6490" target="_blank" rel="noopener noreferrer"><img
+                                src="./images/twitter_logo.svg" style="width: 50px;"></a>
+                        <a href="https://www.instagram.com/hoshimikan6490" target="_blank"
+                            rel="noopener noreferrer"><img src="./images/instagram_logo.svg" style="width: 50px;"></a>
+                        <a href="https://www.youtube.com/@Hoshimikan6490" target="_blank" rel="noopener noreferrer"><img
+                                src="./images/youtube_logo.svg" style="width: 50px;"></a>
+                        <a href="https://note.com/hoshimikan6490" target="_blank" rel="noopener noreferrer"><img
+                                src="./images/note_logo.svg" style="width: 50px;"></a>
                     </div>
                 </div>
+            </div>
+            <div class="waku">
+                <p>色々開発とかしてまーっす！</p>
+            </div>
         </div>
+        <br>
         <div>
             <h1>執筆した記事</h1>
+            <div class="waku">
+                <p>hello</p>
+            </div>
         </div>
+        <br>
         <div>
             <h1>経歴</h2>
         </div>
+        <div class="waku">
+            <p>hello</p>
+        </div>
+        <br>
         <div>
             <h1>連絡先</h1>
+            <div class="waku">
+                <p>hello<br>helljaifeowja<br>aa<br>kusaM<br>aaa</p>
+            </div>
         </div>
     </main>
 
     <footer>
-
         <small>© Hoshimikan6490 2023</small>
     </footer>
-
 </body>
 
 </html>
