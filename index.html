@@ -43,17 +43,6 @@
         padding-bottom: 40px;
     }
 
-    .profile_contents {
-        display: flex;
-        width: 50%;
-        max-width: 1600px;
-        min-width: 500px;
-        margin: 0 auto;
-        padding: 0 20px;
-        justify-content: center;
-        align-items: center;
-    }
-
     .sns_logos {
         display: flex;
         justify-content: space-between;
@@ -71,6 +60,44 @@
         min-width: 500px;
         margin: 0 auto;
         padding: 0 20px;
+    }
+
+    .center_contents {
+        display: flex;
+        width: 75%;
+        max-width: 1600px;
+        min-width: 500px;
+        margin: 0 auto;
+        padding: 0 20px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .articles {
+        width: 100%;
+        text-align: center;
+    }
+
+    .articles a {
+        display: inline-block;
+        width: 40%;
+        height: 100%;
+        margin: 10px;
+    }
+
+    .article {
+        border: 1px solid #333333;
+        border-radius: 10px;
+        padding: 10px;
+    }
+
+    .article h3 {
+        color: black;
+        margin: 0px;
+    }
+
+    .article span {
+        display: inline-block;
     }
 
     footer {
@@ -93,7 +120,7 @@
     <main>
         <div>
             <h1>プロフィール</h1>
-            <div class="profile_contents">
+            <div class="center_contents">
                 <img src="./images/logo.png" style="width: 15%;" alt="私のアイコン">
                 <div style="margin-left: 20px;">
                     <h1>Hoshimikan6490</h1>
@@ -116,16 +143,42 @@
         <br>
         <div>
             <h1>執筆した記事</h1>
-            <div class="waku">
-                <p>hello</p>
+            <div class="center_contents">
+                <div class="articles">
+                    <a href="https://note.com/hoshimikan6490/n/n63aca5db3930">
+                        <div class="article">
+                            <h3><span>Discordの</span><span>アナウンス</span><span>チャンネル</span><span>とは？</span></h3>
+                            <img src="./images/loading-small.gif">
+                        </div>
+                    </a>
+                    <a href="https://note.com/hoshimikan6490/n/n2724da615893">
+                        <div class="article">
+                            <h3><span>Minecraft Education Editionで</span><span>カスタムスキン</span><span>を使う方法</span>
+                            </h3>
+                            <img src="./images/loading-small.gif">
+                        </div>
+                    </a>
+                    <a href="https://note.com/hoshimikan6490/n/n95ebebb9165a">
+                        <div class="article">
+                            <h3><span>TweetShiftの</span><span>使い方</span></h3>
+                            <img src="./images/loading-small.gif">
+                        </div>
+                    </a>
+                    <a href="https://note.com/hoshimikan6490/n/n9ca007d49fe7">
+                        <div class="article">
+                            <h3><span>Makecodeで</span><span>簡単地上絵作成！</span></h3>
+                            <img src="./images/loading-small.gif">
+                        </div>
+                    </a>
+                </div>
             </div>
         </div>
         <br>
         <div>
             <h1>経歴</h2>
-        </div>
-        <div class="waku">
-            <p>hello</p>
+                <div class="waku">
+                    <p>hello</p>
+                </div>
         </div>
         <br>
         <div>
