@@ -2,6 +2,7 @@
 <html lang="ja">
 
 <head>
+    <meta name="viewport" content="width=device-width">
     <link rel="icon" href="./images/logo.ico">
     <link rel="apple-touch-icon" href="./images/logo.ico">
     <title>ホーム｜Hoshimikan6490</title>
@@ -34,12 +35,13 @@
         line-height: 1;
         color: #FFFFFFFF;
         padding: 15px;
+        text-decoration: none;
     }
 
     main {
         padding-top: 60px;
-        padding-left: 10%;
-        padding-right: 10%;
+        padding-left: 5%;
+        padding-right: 5%;
         padding-bottom: 40px;
     }
 
@@ -80,9 +82,19 @@
 
     .articles a {
         display: inline-block;
-        width: 40%;
+        width: 45%;
         height: 100%;
         margin: 10px;
+        ;
+    }
+
+    @media screen and (max-width: 768px) {
+        .articles a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            margin: 10px;
+        }
     }
 
     .article {
@@ -98,6 +110,25 @@
 
     .article span {
         display: inline-block;
+    }
+
+    a.button {
+        background-color: #498205;
+        width: 40%;
+        font-size: large;
+        display: inline-block;
+        text-align: center;
+        color: white;
+        font-weight: bold;
+        text-decoration: none;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-radius: 10px;
+    }
+
+    .article_buttons {
+        margin-top: 20px;
+        text-align: center;
     }
 
     footer {
@@ -148,30 +179,33 @@
                     <a href="https://note.com/hoshimikan6490/n/n63aca5db3930">
                         <div class="article">
                             <h3><span>Discordの</span><span>アナウンス</span><span>チャンネル</span><span>とは？</span></h3>
-                            <img src="./images/loading-small.gif">
+                            <img src="./images/What-is-discord_announce_channel.webp" style="width: 100%;">
                         </div>
                     </a>
                     <a href="https://note.com/hoshimikan6490/n/n2724da615893">
                         <div class="article">
                             <h3><span>Minecraft Education Editionで</span><span>カスタムスキン</span><span>を使う方法</span>
                             </h3>
-                            <img src="./images/loading-small.gif">
+                            <img src="./images/how-to-use-custom_skin.png" style="width: 100%;">
                         </div>
                     </a>
                     <a href="https://note.com/hoshimikan6490/n/n95ebebb9165a">
                         <div class="article">
                             <h3><span>TweetShiftの</span><span>使い方</span></h3>
-                            <img src="./images/loading-small.gif">
+                            <img src="./images/how-to-use-tweetshift.jpg" style="width: 100%;">
                         </div>
                     </a>
                     <a href="https://note.com/hoshimikan6490/n/n9ca007d49fe7">
                         <div class="article">
                             <h3><span>Makecodeで</span><span>簡単地上絵作成！</span></h3>
-                            <img src="./images/loading-small.gif">
+                            <img src="./images/how-to-make-tijoe.jpg" style="width: 100%;">
                         </div>
                     </a>
                 </div>
-                <h1>// 次回TODO　　もっと見るボタン(noteに飛ぶ)と、kogakuintimesのリンク追加</h1>
+            </div>
+            <div class="article_buttons">
+                <a href="https://note.com/hoshimikan6490" class="button">noteの記事をもっと見る</a>
+                <a href="https://kogakuintimes.com/2023/11/28/shinjukusai_shokurepo/" class="button">note以外の記事を見る</a>
             </div>
         </div>
         <br>
@@ -185,7 +219,7 @@
         <div>
             <h1>連絡先</h1>
             <div class="waku">
-                <p>hello<br>helljaifeowja<br>aa<br>kusaM<br>aaa</p>
+                <p>hello<br>aa<br>aa<br>a<br>aaa</p>
             </div>
         </div>
     </main>
