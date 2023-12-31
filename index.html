@@ -2,7 +2,8 @@
 <html lang="ja">
 
 <head>
-    <meta name="viewport" content="width=device-width">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="./images/logo.ico">
     <link rel="apple-touch-icon" href="./images/logo.ico">
     <title>ホーム｜Hoshimikan6490</title>
@@ -39,10 +40,13 @@
     }
 
     main {
-        padding-top: 60px;
-        padding-left: 5%;
-        padding-right: 5%;
-        padding-bottom: 40px;
+        padding: 100px 5% 40px;
+    }
+
+    @media screen and (max-width: 768px) {
+        main {
+            padding: 80px 5% 40px;
+        }
     }
 
     .sns_logos {
@@ -59,18 +63,15 @@
         border-radius: 10px;
         width: 50%;
         max-width: 1600px;
-        min-width: 500px;
         margin: 0 auto;
         padding: 0 20px;
     }
 
     .center_contents {
         display: flex;
-        width: 75%;
         max-width: 1600px;
-        min-width: 500px;
         margin: 0 auto;
-        padding: 0 20px;
+        padding: 0 20px 20px;
         justify-content: center;
         align-items: center;
     }
@@ -131,6 +132,31 @@
         text-align: center;
     }
 
+    table {
+        font-size: larger;
+    }
+
+    tr {
+        margin-bottom: 10px;
+    }
+
+    td {
+        padding-bottom: 10px;
+    }
+
+    td.time {
+        padding-right: 10px;
+        vertical-align: top
+    }
+
+    td.time p {
+        margin: 0px;
+    }
+
+    td span {
+        display: inline-block;
+    }
+
     footer {
         background-color: rgb(200, 200, 200);
         padding-top: 10px;
@@ -164,6 +190,9 @@
                                 src="./images/youtube_logo.svg" style="width: 50px;"></a>
                         <a href="https://note.com/hoshimikan6490" target="_blank" rel="noopener noreferrer"><img
                                 src="./images/note_logo.svg" style="width: 50px;"></a>
+                    </div>
+                    <div class="article_buttons">
+                        <a href="https://lit.link/hoshimikan6490" class="button" style="width: 100%;">リンク集を見る</a>
                     </div>
                 </div>
             </div>
@@ -210,16 +239,55 @@
         </div>
         <br>
         <div>
-            <h1>経歴</h2>
+            <h1>経歴(受賞やプロジェクト発足等)</h2>
                 <div class="waku">
-                    <p>hello</p>
+                    <table>
+                        <tr>
+                            <td class="time">
+                                <p>2018/11/10</p>
+                            </td>
+                            <td><span>東京</span><span>中学</span><span>技術・家庭科</span><span>研究会</span><span>主催</span><span>「第16回</span><span>創造ものづくり</span><span>教育フェア
+                                </span><span>in TOKYO」</span><span>出品</span></td>
+                        </tr>
+                        <tr>
+                            <td class="time">
+                                <p>2019/07/28</p>
+                            </td>
+                            <td><span>ICT</span><span>プロフィシエンシー</span><span>検定協会</span><span>主催　</span><span>Ｐ検準２級　
+                                </span><span>合格</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="time">
+                                <p>2020/03/18</p>
+                            </td>
+                            <td><span>東京都</span><span>産業教育</span><span>振興会</span><span>より、</span><span>優良卒業生</span><span>表彰を</span><span>受ける</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="time">
+                                <p>2020/10/23</p>
+                            </td>
+                            <td><span>Planet-bot-project　</span><span>発足</span><span>（URL準備中）</span></td>
+                        </tr>
+                        <tr>
+                            <td class="time">
+                                <p>2021/02/21</p>
+                            </td>
+                            <td><span>Minecraft </span><span>カップ </span><span>2020
+                                </span><span>全国大会　</span><span>ファイナリスト</span><span>選出</span></td>
+                        </tr>
+                    </table>
                 </div>
         </div>
         <br>
         <div>
             <h1>連絡先</h1>
             <div class="waku">
-                <p>hello<br>aa<br>aa<br>a<br>aaa</p>
+                <p><a>プロフィール欄のSNSアカウントまたは、以下のフォームからご連絡ください。</a></p>
+                <div class="article_buttons" style="padding-bottom: 10px;">
+                    <a href="https://forms.gle/RdmYzA9MEHGsPB839" class="button" style="width: 75%;">お問い合わせフォームへ</a>
+                </div>
             </div>
         </div>
     </main>
