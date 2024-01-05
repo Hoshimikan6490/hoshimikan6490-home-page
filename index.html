@@ -178,6 +178,34 @@
         width: 100%;
         text-align: center;
     }
+
+    .return_top {
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+        color: #ffffff;
+        background-color: #498205;
+        border-radius: 24px;
+        text-align: center;
+        text-decoration: none;
+        font-size: 110%;
+        font-weight: bold;
+        padding: 10px;
+        z-index: 10000;
+        /*普段は隠しておく*/
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .return_top.active {
+        /*activeが付いたら表示*/
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .return_top.active:hover {
+        color: #aabbff
+    }
 </style>
 
 <body>
@@ -368,9 +396,27 @@
         </div>
     </main>
 
+    <a class="return_top" href="#">▲TOPへ戻る</a>
+
     <footer>
         <small>© Hoshimikan6490 2024</small>
     </footer>
 </body>
+
+<script>
+    const returnTop = document.querySelector('.return_top');
+
+    window.addEventListener('scroll', () => {
+        let scrollY = window.scrollY;
+        if (scrollY >= 100) {
+            //classにactive付与
+            returnTop.classList.add('active');
+        }
+        else {
+            //classからactive削除
+            returnTop.classList.remove('active');
+        }
+    });
+</script>
 
 </html>
