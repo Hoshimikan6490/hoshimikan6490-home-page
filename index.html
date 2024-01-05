@@ -134,17 +134,29 @@
         font-size: larger;
     }
 
+    @media screen and (max-width: 768px) {
+        table.pc {
+            display: none;
+        }
+    }
+
+    @media screen and (min-width: 769px) {
+        table.smartphone {
+            display: none;
+        }
+    }
+
     tr {
         margin-bottom: 10px;
     }
 
     td {
         padding-bottom: 10px;
+        vertical-align: top;
     }
 
     td.time {
         padding-right: 10px;
-        vertical-align: top
     }
 
     td.time p {
@@ -243,7 +255,7 @@
         <div>
             <h1>経歴(受賞やプロジェクト発足等)</h2>
                 <div class="waku">
-                    <table>
+                    <table class="pc">
                         <tr>
                             <td class="time">
                                 <p>2018/11/10</p>
@@ -294,6 +306,54 @@
                             </td>
                         </tr>
                     </table>
+
+                    <table class="smartphone">
+                        <tr>
+                            <td class="time">
+                                <p>2018/11/10</p>
+                                <a href="https://ajgika.ne.jp/fair.html"><span>これに</span><span>ついて</span><span>見る</span><img
+                                        src="./images/url_open.png" style="width: 20%;"></a>
+                            </td>
+                            <td><span>東京</span><span>中学</span><span>技術・家庭科</span><span>研究会</span><span>主催</span><span>「第16回</span><span>創造ものづくり</span><span>教育フェア
+                                </span><span>in TOKYO」</span><span>出品</span></td>
+                        </tr>
+                        <tr>
+                            <td class="time">
+                                <p>2019/07/28</p>
+                                <a href="https://www.pken.com/merit/justice.html"><span>これに</span><span>ついて</span><span>見る</span><img
+                                        src="./images/url_open.png" style="width: 20%;"></a>
+                            </td>
+                            <td><span>ICT</span><span>プロフィシエンシー</span><span>検定協会</span><span>主催　</span><span>Ｐ検準２級　
+                                </span><span>合格</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="time">
+                                <p>2020/03/18</p>
+                                <a href="https://www.tosanshin.org/about/jigyo.html"><span>これに</span><span>ついて</span><span>見る</span><img
+                                        src="./images/url_open.png" style="width: 20%;"></a>
+                            </td>
+                            <td><span>東京都</span><span>産業教育</span><span>振興会</span><span>より、</span><span>優良卒業生</span><span>表彰を</span><span>受ける</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="time">
+                                <p>2020/10/23</p>
+                                <a href=""><span>これに</span><span>ついて</span><span>見る</span><img
+                                        src="./images/url_open.png" style="width: 20%;"></a>
+                            </td>
+                            <td><span>Planet-bot-project　</span><span>発足</span><span>（URL準備中）</span></td>
+                        </tr>
+                        <tr>
+                            <td class="time">
+                                <p>2021/02/21</p>
+                                <a href="https://www.tosanshin.org/about/jigyo.html"><span>これに</span><span>ついて</span><span>見る</span><img
+                                        src="./images/url_open.png" style="width: 20%;"></a>
+                            </td>
+                            <td><span>Minecraft </span><span>カップ </span><span>2020
+                                </span><span>全国大会　</span><span>ファイナリスト</span><span>選出</span></td>
+                        </tr>
+                    </table>
                 </div>
         </div>
         <br>
@@ -309,7 +369,7 @@
     </main>
 
     <footer>
-        <small>© Hoshimikan6490 2023</small>
+        <small>© Hoshimikan6490 2024</small>
     </footer>
 </body>
 
