@@ -63,8 +63,20 @@
 
     .headerRight {
         width: 50%;
-        display: inline-block;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
         padding-right: 20px;
+    }
+
+    @media screen and (max-width: 768px) {
+        .headerLeft {
+            width: 100%;
+        }
+
+        .headerRight {
+            display: none;
+        }
     }
 
     main {
@@ -248,7 +260,10 @@
                 </a>
             </div>
             <div class="headerRight">
-
+                <a href="https://github.com/hoshimikan6490/about-me/">
+                    <img alt="このWebサイトのプログラムが見られるボタン"
+                        src="https://img.shields.io/badge/View%20on%20Github-grey?style=for-the-badge&logo=github">
+                </a>
             </div>
         </div>
     </header>
