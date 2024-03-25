@@ -1,11 +1,20 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "timezone": "Asia/Tokyo",
-  "schedule": ["before 10am on Saturday"],
-  "automerge": false,
+  "extends": [
+    "config:base",
+    "group:allNonMajor",
+    ":separateMultipleMajorReleases",
+    "schedule:earlyMondays",
+    ":prConcurrentLimitNone",
+    ":prHourlyLimitNone",
+    ":timezone(Asia/Tokyo)"
+  ],
+  "labels": ["renovate"],
   "enabledManagers": ["npm"],
+  "prConcurrentLimit": 0,
+  "prHourlyLimit": 0,
+  "dependencyDashboard": false,
   "assignees": ["@Hoshimikan6490"],
   "reviewers": ["@Hoshimikan6490"],
-  "dependencyDashboard": false,
-  "extends": ["config:base"]
+  "major": { "labels": ["renovate", "update_major"] }
 }
