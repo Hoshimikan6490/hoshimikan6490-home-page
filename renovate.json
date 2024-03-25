@@ -3,10 +3,8 @@
   "timezone": "Asia/Tokyo",
   "schedule": ["before 10am on Saturday"],
   "automerge": false,
-  "platforms": ["github"],
   "assignees": ["@Hoshimikan6490"],
   "reviewers": ["@Hoshimikan6490"],
   "dependencyDashboard": false,
-  "groupBy": "packageName",
   "extends": ["config:base"]
 }
