@@ -3,6 +3,7 @@
   "timezone": "Asia/Tokyo",
   "schedule": ["before 10am on Saturday"],
   "automerge": false,
+  "enabledManagers": ["npm"],
   "assignees": ["@Hoshimikan6490"],
   "reviewers": ["@Hoshimikan6490"],
   "dependencyDashboard": false,
