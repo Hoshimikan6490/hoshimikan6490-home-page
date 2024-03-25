@@ -1,16 +1,16 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-
-  "assignees": ["@Hoshimikan6490"],
-
   "extends": [
     "config:base",
     ":disableDependencyDashboard",
     ":ignoreModulesAndTests",
     "group:monorepos"
   ],
-
+  "ignorePresets": [":prHourlyLimit2"],
+  "branchConcurrentLimit": 0,
   "timezone": "Asia/Tokyo",
-
-  "schedule": ["before 10am"]
+  "schedule": ["after 9:00 and before 10:00 every weekday"],
+  "labels": ["renovate"],
+  "assignees": ["@Hoshimikan6490"],
+  "reviewers": ["@Hoshimikan6490"]
 }
