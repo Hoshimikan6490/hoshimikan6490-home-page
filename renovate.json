@@ -1,27 +1,14 @@
 {
-	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
-	"extends": [
-		"config:base",
-		"group:allNonMajor",
-		":separateMultipleMajorReleases",
-		"schedule:daily",
-		":prConcurrentLimitNone",
-		":prHourlyLimitNone",
-		":timezone(Asia/Tokyo)"
-	],
-	"labels": ["renovate"],
-	"enabledManagers": ["npm"],
-	"major": { "labels": ["renovate", "update_major"] },
-	"platformAutomerge": true,
-	"packageRules": [
-		{
-			"description": "Automerge non-major updates",
-			"matchUpdateTypes": ["minor", "patch"],
-			"automerge": true
-		},
-		{
-			"rangeStrategy": "bump"
-		}
-	],
-	"ignoreDeps": ["vue", "vue-router", "vuetify", "vuex"]
+  "extends": ["config:base"],
+
+  "schedule": ["every 1 hour after 00:00 and before 23:59 every day"],
+
+  "automergeSchedule": ["every 1 hour after 00:00 and before 23:59 every day"],
+
+  "packageRules": [
+    {
+      "matchUpdateTypes": ["major", "minor", "patch", "pin", "digest"],
+      "automerge": false
+    }
+  ]
 }
