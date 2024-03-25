@@ -1,14 +1,16 @@
 {
-  "extends": ["config:base"],
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
 
-  "schedule": ["every 1 hour after 00:00 and before 23:59 every day"],
+  "assignees": ["@Hoshimikan6490"],
 
-  "automergeSchedule": ["every 1 hour after 00:00 and before 23:59 every day"],
+  "extends": [
+    "config:base",
+    ":disableDependencyDashboard",
+    ":ignoreModulesAndTests",
+    "group:monorepos"
+  ],
 
-  "packageRules": [
-    {
-      "matchUpdateTypes": ["major", "minor", "patch", "pin", "digest"],
-      "automerge": false
-    }
-  ]
+  "timezone": "Asia/Tokyo",
+
+  "schedule": ["before 10am"]
 }
