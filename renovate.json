@@ -1,6 +1,7 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["config:base", "group:all", "schedule:before 4am on Monday"],
+  "extends": ["config:base", "group:all"],
+  "schedule": ["before 4am on Monday"],
   "separateMultipleMajor": false,
   "prConcurrentLimit": 0,
   "prHourlyLimit": 0,
