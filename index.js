@@ -12,6 +12,10 @@ app.use(express.static("./images"));
 app.use("/images", express.static("./images"));
 
 app.get("/", async function (req, res) {
+  res.redirect("/about-me")
+});
+
+app.get("/about-me", async function (req, res) {
   res.sendFile(__dirname + "/index.html");
 });
 
