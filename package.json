@@ -1,7 +1,7 @@
 {
-  "name": "about-me",
+  "name": "hoshimikan6490.github.io",
   "version": "1.0.0",
-  "description": "",
+  "description": "https://hoshimikan6490.github.io/",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -9,7 +9,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "compression": "^1.7.4",
     "express": "^4.19.2"
   }
 }
