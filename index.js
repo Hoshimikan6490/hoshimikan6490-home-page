@@ -13,6 +13,10 @@ app.get("/sakuhin", async function (req, res) {
   res.sendFile(__dirname + "/sakuhin.html");
 });
 
+app.get("/style.css", async function (req, res) {
+  res.sendFile(__dirname + "/style.css");
+});
+
 app.listen(port, function () {
   console.log(`[NodeJS] Application Listening on Port ${port}`);
 });
