@@ -97,7 +97,7 @@ main {
     display: flex;
     max-width: 1600px;
     margin: 0 auto;
-    padding: 0 20px 20px;
+    padding: 0 20px;
     justify-content: center;
     align-items: center;
 }
@@ -154,7 +154,6 @@ a.button {
 }
 
 .article_buttons {
-    margin-top: 20px;
     text-align: center;
 }
 

@@ -9,8 +9,8 @@ app.get("/", async function (req, res) {
   res.sendFile(__dirname + "/index.html");
 });
 
-app.get("/sakuhin", async function (req, res) {
-  res.sendFile(__dirname + "/sakuhin.html");
+app.get("/activity", async function (req, res) {
+  res.sendFile(__dirname + "/activity.html");
 });
 
 app.get("/style.css", async function (req, res) {
