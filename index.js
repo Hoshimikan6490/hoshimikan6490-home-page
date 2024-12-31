@@ -9,6 +9,10 @@ app.get("/", async function (req, res) {
   res.sendFile(__dirname + "/index.html");
 });
 
+app.get("/sakuhin", async function (req, res) {
+  res.sendFile(__dirname + "/sakuhin.html");
+});
+
 app.listen(port, function () {
   console.log(`[NodeJS] Application Listening on Port ${port}`);
 });
