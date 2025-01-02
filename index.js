@@ -1,6 +1,10 @@
+const compression = require("compression");
 const express = require("express");
 const app = express();
 let port = 8888;
+
+// GZIP圧縮を有効にする
+app.use(compression());
 
 app.use(express.static("./images"));
 app.use("/images", express.static("./images"));
