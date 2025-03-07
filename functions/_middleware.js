@@ -16,7 +16,8 @@ export async function onRequest(context) {
     headers: new Headers(context.request.headers),
   });
   // 取得したコンテンツをレスポンスとして返す
-  return new Response(response.body, {
+  const responseBody = await response.blob();
+  return new Response(responseBody, {
     status: response.status,
     statusText: response.statusText,
     headers: new Headers(response.headers),
