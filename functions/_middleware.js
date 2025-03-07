@@ -22,5 +22,3 @@ export async function onRequest(context) {
     headers: new Headers(response.headers),
   });
 }
-
-export const onRequest = [handleReverseProxy];
