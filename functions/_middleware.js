@@ -1,4 +1,4 @@
-const handleReverseProxy = async (context) => {
+export async function onRequest(context) {
   const originalUrl = context.request.url;
   const url = new URL(originalUrl);
   // /markdown-share-button/内でなければ処理を中断
@@ -21,6 +21,6 @@ const handleReverseProxy = async (context) => {
     statusText: response.statusText,
     headers: new Headers(response.headers),
   });
-};
+}
 
 export const onRequest = [handleReverseProxy];
