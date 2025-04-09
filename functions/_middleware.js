@@ -2,7 +2,10 @@ export async function onRequest(context) {
   const originalUrl = context.request.url;
   const url = new URL(originalUrl);
   // /markdown-share-button/内でなければ処理を中断
-  if (!url.pathname.startsWith("/markdown-share-button")) {
+  if (
+    !url.pathname.startsWith("/markdown-share-button") &&
+    url.pathname.startsWith("/markdown-share-button/markdown-share-button")
+  ) {
     return await context.next();
   }
   // /markdown-share-button/内であればhttps://markdown-share-button.pages.devよりコンテンツを取得
