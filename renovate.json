@@ -1,11 +1,20 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["config:base", "group:all"],
-  "schedule": ["before 4am on Monday"],
+  "extends": [
+    "config:recommended",
+    "group:all"
+  ],
+  "schedule": [
+    "before 4am on Monday"
+  ],
   "separateMultipleMajor": false,
   "prConcurrentLimit": 0,
   "prHourlyLimit": 0,
   "timezone": "Asia/Tokyo",
-  "assignees": ["@Hoshimikan6490"],
-  "reviewers": ["@Hoshimikan6490"]
+  "assignees": [
+    "@Hoshimikan6490"
+  ],
+  "reviewers": [
+    "@Hoshimikan6490"
+  ]
 }
