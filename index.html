@@ -301,7 +301,7 @@
         </div>
     </main>
 
-    <a class="return_top" href="#">▲TOPへ戻る</a>
+    <a id="return_top" href="#">▲TOPへ戻る</a>
 
     <footer>
         <small>© Hoshimikan6490 2024</small>
@@ -309,7 +309,7 @@
 </body>
 
 <script>
-    const returnTop = document.querySelector('.return_top');
+    const returnTop = document.getElementById('return_top');
 
     window.addEventListener('scroll', () => {
         let scrollY = window.scrollY;
@@ -322,6 +322,24 @@
             returnTop.classList.remove('active');
         }
     });
+
+    returnTop.addEventListener("click", function (event) {
+        event.preventDefault();
+        const duration = 500;
+        const start = window.scrollY;
+        const startTime = performance.now();
+
+        function scrollStep(now) {
+            const elapsed = now - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            const eased = 1 - Math.pow(1 - progress, 3)
+            window.scrollTo(0, start * (1 - eased));
+            if (progress < 1) {
+                requestAnimationFrame(scrollStep);
+            }
+        }
+        requestAnimationFrame(scrollStep);
+    })
 </script>
 
 </html>
