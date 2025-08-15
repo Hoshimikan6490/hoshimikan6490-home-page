@@ -155,6 +155,10 @@ a.button {
   border-radius: 10px;
 }
 
+a.button:hover {
+  background-color: #3a6200;
+}
+
 .article_buttons {
   text-align: center;
 }
@@ -219,14 +223,7 @@ footer {
   position: fixed;
   bottom: 10px;
   right: 10px;
-  color: #ffffff;
-  background-color: #498205;
   border-radius: 24px;
-  text-align: center;
-  text-decoration: none;
-  font-size: 110%;
-  font-weight: bold;
-  padding: 10px;
   z-index: 10000;
   /*普段は隠しておく*/
   opacity: 0;
@@ -237,8 +234,4 @@ footer {
   /*activeが付いたら表示*/
   opacity: 1;
   visibility: visible;
-}
-
-#return_top.active:hover {
-  color: #aabbff
 }
