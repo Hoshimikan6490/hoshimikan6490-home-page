@@ -21,6 +21,14 @@ app.get("/style.css", async function (req, res) {
 	res.sendFile(__dirname + "/style.css");
 });
 
+app.get("/robots.txt", async function (req, res) {
+	res.sendFile(__dirname + "/robots.txt");
+});
+
+app.get("/sitemap.xml", async function (req, res) {
+	res.sendFile(__dirname + "/sitemap.xml");
+});
+
 app.listen(port, function () {
 	console.log(`[NodeJS] Application Listening on Port ${port}`);
 });
