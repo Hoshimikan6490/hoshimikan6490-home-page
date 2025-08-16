@@ -10,23 +10,23 @@ app.use(express.static("./images"));
 app.use("/images", express.static("./images"));
 
 app.get("/", async function (req, res) {
-	res.sendFile(__dirname + "/index.html");
+	res.sendFile(`${__dirname}/index.html`);
 });
 
 app.get("/activity", async function (req, res) {
-	res.sendFile(__dirname + "/activity.html");
+	res.sendFile(`${__dirname}/activity.html`);
 });
 
 app.get("/style.css", async function (req, res) {
-	res.sendFile(__dirname + "/style.css");
+	res.sendFile(`${__dirname}/style.css`);
 });
 
 app.get("/robots.txt", async function (req, res) {
-	res.sendFile(__dirname + "/robots.txt");
+	res.sendFile(`${__dirname}/robots.txt`);
 });
 
 app.get("/sitemap.xml", async function (req, res) {
-	res.sendFile(__dirname + "/sitemap.xml");
+	res.sendFile(`${__dirname}/sitemap.xml`);
 });
 
 app.listen(port, function () {
