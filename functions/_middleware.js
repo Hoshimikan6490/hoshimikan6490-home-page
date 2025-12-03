@@ -3,7 +3,11 @@ export async function onRequest(context) {
   const url = new URL(originalUrl);
 
   // /markdown-share-button/内でなければ処理を中断
-  if (url.pathname !== '/markdown-share-button') return await context.next();
+  if (
+    url.pathname !== '/markdown-share-button' &&
+    url.pathname !== '/markdown-share-button/'
+  )
+    return await context.next();
 
   // /markdown-share-button/内であればhttps://markdown-share-button.pages.dev よりコンテンツを取得
   // /markdown-share-button の後に続くパスを取得（最初の1回だけ置換）
