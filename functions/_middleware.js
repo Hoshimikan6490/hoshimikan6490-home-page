@@ -7,11 +7,10 @@ export async function onRequest(context) {
 		return await context.next();
 
 	// /markdown-share-button/内であればhttps://markdown-share-button.pages.devよりコンテンツを取得
+	// /markdown-share-button の後に続くパスを取得（最初の1回だけ置換）
+	const pathAfterPrefix = url.pathname.substring("/markdown-share-button".length);
 	const newUrl = new URL(
-		`https://markdown-share-button.pages.dev${url.pathname.replace(
-			"/markdown-share-button",
-			""
-		)}${url.search}`
+		`https://markdown-share-button.pages.dev${pathAfterPrefix}${url.search}`
 	);
 	const response = await fetch(new Request(newUrl), {
 		headers: new Headers(context.request.headers),
