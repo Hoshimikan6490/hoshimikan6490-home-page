@@ -1,0 +1,22 @@
+# セキュリティヘッダー設定
+
+# すべてのページに基本的なセキュリティヘッダーを適用
+/*
+  # XSS保護 - ブラウザのXSSフィルターを有効化
+  X-XSS-Protection: 1; mode=block
+  
+  # クリックジャッキング対策 - iframe内での表示を防止
+  X-Frame-Options: DENY
+  
+  # MIME-type sniffingを無効化
+  X-Content-Type-Options: nosniff
+  
+  # Referrer情報の制御
+  Referrer-Policy: strict-origin-when-cross-origin
+  
+  # Content Security Policy - コンテンツソースを制限
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'
+
+# 静的アセット用のキャッシュ設定
+/images/*
+  Cache-Control: public, max-age=31536000, immutable
