@@ -116,7 +116,8 @@ main {
   width: 45%;
   height: 100%;
   margin: 10px;
-  ;
+  color: black;
+  text-decoration: none;
 }
 
 @media screen and (max-width: 768px) {
@@ -135,7 +136,6 @@ main {
 }
 
 .article h2 {
-  color: black;
   margin: 0px;
 }
 
