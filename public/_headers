@@ -17,6 +17,18 @@
   # Content Security Policy - コンテンツソースを制限
   Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' cdn.credly.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' cdn.credly.com www.credly.com; frame-src www.credly.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self'
 
+# HTMLファイルのキャッシュ設定 - 常に最新版を取得
+/*.html
+  Cache-Control: no-cache, must-revalidate
+
+# CSSファイルのキャッシュ設定 - 1日間キャッシュ
+/*.css
+  Cache-Control: public, max-age=86400
+
+# JavaScriptファイルのキャッシュ設定 - 1日間キャッシュ
+/*.js
+  Cache-Control: public, max-age=86400
+
 # 静的アセット用のキャッシュ設定
 /images/*
   Cache-Control: public, max-age=31536000, immutable
