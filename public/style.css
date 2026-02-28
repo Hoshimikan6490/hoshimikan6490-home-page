@@ -106,6 +106,31 @@ main {
   align-items: center;
 }
 
+@media screen and (max-width: 768px) {
+  .center_contents {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .center_contents>img {
+    width: 40% !important;
+  }
+
+  .center_contents>div {
+    margin-left: 0 !important;
+    width: 100%;
+  }
+
+  .sns_logos {
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .article_buttons {
+    margin-top: 15px;
+  }
+}
+
 .articles {
   width: 100%;
   text-align: center;
