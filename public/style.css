@@ -28,7 +28,9 @@ header {
 }
 
 .Myname {
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   height: 100%;
   margin-left: 5px;
 }
@@ -37,9 +39,14 @@ header {
   margin: 0;
   font-size: 225%;
   color: #FFFFFFFF;
-  height: 100%;
-  display: flex;
-  align-items: center;
+  line-height: 1;
+}
+
+.Myname .realName {
+  font-size: 70%;
+  color: #FFFFFFFF;
+  line-height: 1;
+  margin: 0 auto;
 }
 
 .headerLeft a {
