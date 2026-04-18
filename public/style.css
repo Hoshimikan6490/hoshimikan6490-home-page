@@ -1,5 +1,10 @@
 body {
   margin: 0px;
+  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Nato Sans JP", sans-serif;
+  overflow-wrap: anywhere;
+  word-break: normal;
+  line-break: strict;
+  text-autospace: normal;
 }
 
 header {
@@ -199,15 +204,28 @@ table {
   font-size: larger;
 }
 
-@media screen and (max-width: 768px) {
-  table.pc {
-    display: none;
-  }
+table.timeline .mobile_link {
+  display: none;
 }
 
-@media screen and (min-width: 769px) {
-  table.smartphone {
+@media screen and (max-width: 768px) {
+  table.timeline td.url {
     display: none;
+  }
+
+  table.timeline td.time {
+    width: 42%;
+  }
+
+  table.timeline .mobile_link {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    margin-top: 4px;
+  }
+
+  table.timeline .mobile_link img {
+    width: 20px;
   }
 }
 
