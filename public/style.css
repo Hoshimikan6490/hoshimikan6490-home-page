@@ -196,6 +196,15 @@ a.button:hover {
   background-color: #3a6200;
 }
 
+a.non_URL {
+  pointer-events: none;
+  color: gray;
+}
+
+a.non_URL img {
+  filter: grayscale(100%);
+}
+
 .article_buttons {
   text-align: center;
 }
