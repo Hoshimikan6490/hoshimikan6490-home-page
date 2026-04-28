@@ -1,0 +1,11 @@
+{
+	"resource": "https://hoshimikan6490.com/",
+	"authorization_servers": [
+		"https://hoshimikan6490.com"
+	],
+	"scopes_supported": [
+		"openid",
+		"profile",
+		"email"
+	]
+}

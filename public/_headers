@@ -21,6 +21,39 @@
 /*.html
   Cache-Control: no-cache, must-revalidate
 
+/
+  Link: </.well-known/api-catalog>; rel="api-catalog", </docs/api>; rel="service-doc", </openapi.json>; rel="service-desc", </.well-known/oauth-protected-resource>; rel="describedby"
+
+/index.html
+  Link: </.well-known/api-catalog>; rel="api-catalog", </docs/api>; rel="service-doc", </openapi.json>; rel="service-desc", </.well-known/oauth-protected-resource>; rel="describedby"
+
+/.well-known/api-catalog
+  Content-Type: application/linkset+json; charset=utf-8
+
+/.well-known/openid-configuration
+  Content-Type: application/json; charset=utf-8
+
+/.well-known/oauth-protected-resource
+  Content-Type: application/json; charset=utf-8
+
+/.well-known/mcp/server-card.json
+  Content-Type: application/json; charset=utf-8
+
+/.well-known/agent-skills/index.json
+  Content-Type: application/json; charset=utf-8
+
+/.well-known/agent-skills/site-discovery/SKILL.md
+  Content-Type: text/markdown; charset=utf-8
+
+/docs/api
+  Content-Type: text/html; charset=utf-8
+
+/openapi.json
+  Content-Type: application/json; charset=utf-8
+
+/healthz
+  Content-Type: application/json; charset=utf-8
+
 # CSSファイルのキャッシュ設定 - 1日間キャッシュ
 /*.css
   Cache-Control: public, max-age=86400

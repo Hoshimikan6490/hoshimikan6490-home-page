@@ -73,7 +73,7 @@
 				</div>
 				<div class="headerRight">
 					<a
-						href="https://github.com/Hoshimikan6490/hoshimikan6490.github.io"
+						href="https://github.com/Hoshimikan6490/hoshimikan6490-home-page"
 						target="_blank"
 						rel="noopener noreferrer"
 					>
@@ -366,38 +366,38 @@
 		<footer>
 			<small>© Hoshimikan6490 2026</small>
 		</footer>
-	</body>
+		<script src="/agent-tools.js" defer></script>
+		<script>
+			const returnTop = document.getElementById('return_top');
 
-	<script>
-		const returnTop = document.getElementById('return_top');
-
-		window.addEventListener('scroll', () => {
-			let scrollY = window.scrollY;
-			if (scrollY >= 100) {
-				//classにactive付与
-				returnTop.classList.add('active');
-			} else {
-				//classからactive削除
-				returnTop.classList.remove('active');
-			}
-		});
-
-		returnTop.addEventListener('click', function (event) {
-			event.preventDefault();
-			const duration = 500;
-			const start = window.scrollY;
-			const startTime = performance.now();
-
-			function scrollStep(now) {
-				const elapsed = now - startTime;
-				const progress = Math.min(elapsed / duration, 1);
-				const eased = 1 - Math.pow(1 - progress, 3);
-				window.scrollTo(0, start * (1 - eased));
-				if (progress < 1) {
-					requestAnimationFrame(scrollStep);
+			window.addEventListener('scroll', () => {
+				let scrollY = window.scrollY;
+				if (scrollY >= 100) {
+					//classにactive付与
+					returnTop.classList.add('active');
+				} else {
+					//classからactive削除
+					returnTop.classList.remove('active');
 				}
-			}
-			requestAnimationFrame(scrollStep);
-		});
-	</script>
+			});
+
+			returnTop.addEventListener('click', function (event) {
+				event.preventDefault();
+				const duration = 500;
+				const start = window.scrollY;
+				const startTime = performance.now();
+
+				function scrollStep(now) {
+					const elapsed = now - startTime;
+					const progress = Math.min(elapsed / duration, 1);
+					const eased = 1 - Math.pow(1 - progress, 3);
+					window.scrollTo(0, start * (1 - eased));
+					if (progress < 1) {
+						requestAnimationFrame(scrollStep);
+					}
+				}
+				requestAnimationFrame(scrollStep);
+			});
+		</script>
+	</body>
 </html>

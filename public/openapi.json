@@ -1,0 +1,50 @@
+{
+	"openapi": "3.1.0",
+	"info": {
+		"title": "Hoshimikan6490 Discovery API",
+		"version": "1.0.0",
+		"description": "Agent discovery resources for hoshimikan6490.com"
+	},
+	"paths": {
+		"/": {
+			"get": {
+				"summary": "Homepage",
+				"responses": {
+					"200": { "description": "HTML homepage" }
+				}
+			}
+		},
+		"/activity": {
+			"get": {
+				"summary": "Activity page",
+				"responses": {
+					"200": { "description": "HTML activity page" }
+				}
+			}
+		},
+		"/docs/api": {
+			"get": {
+				"summary": "API documentation",
+				"responses": {
+					"200": { "description": "Documentation page" }
+				}
+			}
+		},
+		"/.well-known/api-catalog": {
+			"get": {
+				"summary": "API catalog",
+				"responses": {
+					"200": { "description": "Linkset JSON" }
+				}
+			}
+		},
+		"/healthz": {
+			"get": {
+				"summary": "Health check",
+				"responses": {
+					"200": { "description": "Service status" }
+				}
+			}
+		}
+	}
+}
