@@ -157,6 +157,11 @@ app.get('/sitemap.xml', async function (req, res) {
 	res.sendFile(`${__dirname}/public/sitemap.xml`);
 });
 
+// 404 ハンドラー
+app.use(function (req, res) {
+	res.status(404).sendFile(`${__dirname}/public/404.html`);
+});
+
 app.listen(port, function () {
 	console.log(`[NodeJS] Application Listening on Port ${port}`);
 });
