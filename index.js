@@ -32,6 +32,7 @@ function homeMarkdown() {
 		'',
 		'## 主要ページ',
 		'- /activity - 執筆記事や作成動画の一覧',
+		'- /research - 研究活動に関するページ',
 		'- /docs/api - エージェント向けの API ドキュメント',
 		'- /.well-known/api-catalog - API カタログ',
 		'- /openapi.json - OpenAPI 定義',
@@ -52,6 +53,14 @@ function activityMarkdown() {
 		'- note 記事や Qiita 記事へのリンク',
 		'- 大学や委員会での執筆実績',
 		'- 動画・制作物の案内',
+	].join('\n');
+}
+
+function researchMarkdown() {
+	return [
+		'# 研究活動に関するページ',
+		'',
+		'研究室やそれに関する自己紹介などが書かれているページです。',
 	].join('\n');
 }
 
@@ -117,6 +126,8 @@ app.use(function (req, res, next) {
 			req.path === '/index.html' ||
 			req.path === '/activity' ||
 			req.path === '/activity.html' ||
+			req.path === '/research' ||
+			req.path === '/research.html' ||
 			req.path === '/docs/api')
 	) {
 		if (req.path === '/' || req.path === '/index.html') {
@@ -125,6 +136,10 @@ app.use(function (req, res, next) {
 
 		if (req.path === '/activity' || req.path === '/activity.html') {
 			return sendMarkdown(res, activityMarkdown());
+		}
+
+		if (req.path === '/research' || req.path === '/research.html') {
+			return sendMarkdown(res, researchMarkdown());
 		}
 
 		if (req.path === '/docs/api') {
@@ -143,6 +158,10 @@ app.get('/', async function (req, res) {
 
 app.get('/activity', async function (req, res) {
 	res.sendFile(`${__dirname}/public/activity.html`);
+});
+
+app.get('/research', async function (req, res) {
+	res.sendFile(`${__dirname}/public/research.html`);
 });
 
 app.get('/style.css', async function (req, res) {

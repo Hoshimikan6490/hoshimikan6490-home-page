@@ -22,6 +22,14 @@
 				}
 			}
 		},
+		"/research": {
+			"get": {
+				"summary": "Research page",
+				"responses": {
+					"200": { "description": "HTML research page" }
+				}
+			}
+		},
 		"/docs/api": {
 			"get": {
 				"summary": "API documentation",

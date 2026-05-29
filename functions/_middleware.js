@@ -31,6 +31,7 @@ export async function onRequest(context) {
 			'',
 			'## 主要ページ',
 			'- /activity - 執筆記事や作成動画の一覧',
+			'- /research - 研究活動に関するページ',
 			'- /docs/api - エージェント向けの API ドキュメント',
 			'- /.well-known/api-catalog - API カタログ',
 			'- /openapi.json - OpenAPI 定義',
@@ -51,6 +52,14 @@ export async function onRequest(context) {
 			'- note 記事や Qiita 記事へのリンク',
 			'- 大学や委員会での執筆実績',
 			'- 動画・制作物の案内',
+		].join('\n');
+	}
+
+	function researchMarkdown() {
+		return [
+			'# 研究活動に関するページ',
+			'',
+			'研究室やそれに関する自己紹介などが書かれているページです。',
 		].join('\n');
 	}
 
@@ -105,6 +114,8 @@ export async function onRequest(context) {
 			url.pathname === '/index.html' ||
 			url.pathname === '/activity' ||
 			url.pathname === '/activity.html' ||
+			url.pathname === '/research' ||
+			url.pathname === '/research.html' ||
 			url.pathname === '/docs/api')
 	) {
 		if (url.pathname === '/' || url.pathname === '/index.html') {
@@ -113,6 +124,10 @@ export async function onRequest(context) {
 
 		if (url.pathname === '/activity' || url.pathname === '/activity.html') {
 			return markdownResponse(activityMarkdown());
+		}
+
+		if (url.pathname === '/research' || url.pathname === '/research.html') {
+			return markdownResponse(researchMarkdown());
 		}
 
 		if (url.pathname === '/docs/api') {

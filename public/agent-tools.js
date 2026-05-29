@@ -16,7 +16,7 @@
 				properties: {
 					target: {
 						type: 'string',
-						enum: ['home', 'activity', 'docs-api'],
+						enum: ['home', 'activity', 'research', 'docs-api'],
 					},
 				},
 				required: ['target'],
@@ -29,6 +29,7 @@
 				const destinations = {
 					home: '/',
 					activity: '/activity',
+					research: '/research',
 					'docs-api': '/docs/api',
 				};
 
