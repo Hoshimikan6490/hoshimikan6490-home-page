@@ -98,6 +98,10 @@ main {
   align-items: center;
 }
 
+.sns_logos a {
+  margin: 0px 10px;
+}
+
 img.white_logo {
   background-color: black;
   padding: 5px;
