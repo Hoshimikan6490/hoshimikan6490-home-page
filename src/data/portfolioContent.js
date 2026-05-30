@@ -1,12 +1,11 @@
-import Seo from '../components/tags/Seo';
-import SiteHeader from '../components/layout/SiteHeader';
-import ReturnTopButton from '../components/layout/ReturnTopButton';
-import PageFooter from '../components/layout/PageFooter';
-import ArticleGrid from '../components/content/ArticleGrid';
-import urlOpen from '../assets/url_open.webp';
+import twitterLogo from '../assets/sns_logo/twitter_logo.svg';
+import instagramLogo from '../assets/sns_logo/instagram_logo.svg';
+import youtubeLogo from '../assets/sns_logo/youtube_logo.svg';
+import noteLogo from '../assets/sns_logo/note_logo.svg';
+import qiitaLogo from '../assets/sns_logo/qiita_logo.svg';
 import makecodeThumb from '../assets/note_thumbnail/how-to-make-tijoe.webp';
 import discordAnnounceThumb from '../assets/note_thumbnail/What-is-discord_announce_channel.webp';
-import customSkinThumb from '../assets/note_thumbnail/how-to-use-custom_skin.webp';
+import customSkinThumb from '../assets/note_thumbnail/how-to-use_custom_skin.webp';
 import openSoundThumb from '../assets/note_thumbnail/how-to-easily-open-sound-settings.webp';
 import tweetshiftThumb from '../assets/note_thumbnail/how-to-use-tweetshift.webp';
 import javaMinecraftThumb from '../assets/note_thumbnail/java-minecraft-on-surface-go.webp';
@@ -18,7 +17,41 @@ import yumekousaiThumb from '../assets/kogakuintimes_thumbnail/kogakuinNote_yume
 import youtubeAdminThumb from '../assets/youtube_thumbnail/youtube_how-to-add-admin-on-discord.webp';
 import youtubeHeatBlockThumb from '../assets/youtube_thumbnail/youtube_how-to-make-heatBlock.webp';
 
-const personalArticles = [
+export const socialLinks = [
+	{
+		href: 'https://twitter.com/hoshimikan6490',
+		src: twitterLogo,
+		alt: 'twitterのロゴ',
+		width: 50,
+	},
+	{
+		href: 'https://www.instagram.com/hoshimikan6490',
+		src: instagramLogo,
+		alt: 'Instagramのロゴ',
+		width: 50,
+	},
+	{
+		href: 'https://www.youtube.com/@Hoshimikan6490',
+		src: youtubeLogo,
+		alt: 'youtubeのロゴ',
+		width: 50,
+	},
+	{
+		href: 'https://note.com/hoshimikan6490',
+		src: noteLogo,
+		alt: 'noteのロゴ',
+		width: 50,
+	},
+	{
+		href: 'https://qiita.com/Hoshimikan6490',
+		src: qiitaLogo,
+		alt: 'Qiitaのロゴ',
+		width: 40,
+		className: 'white_logo',
+	},
+];
+
+export const personalArticles = [
 	{
 		href: 'https://note.com/hoshimikan6490/n/n9ca007d49fe7',
 		title: 'Makecodeで簡単地上絵作成！',
@@ -70,7 +103,7 @@ const personalArticles = [
 	},
 ];
 
-const committeeArticles = [
+export const committeeArticles = [
 	{
 		href: 'https://kogakuintimes.com/2024/04/06/shinnyuseikangeikaizenjitsujumbi-mitchaku/',
 		title: '工学院大学　新入生歓迎会実行委員会の前日準備に密着！！',
@@ -92,7 +125,7 @@ const committeeArticles = [
 	},
 ];
 
-const videoArticles = [
+export const videoArticles = [
 	{
 		href: 'https://youtu.be/Ud1LILCsBFA',
 		title: 'discordで人やBOTに管理者権限を与える方法',
@@ -106,113 +139,3 @@ const videoArticles = [
 		alt: '熱ブロックの作り方について解説した動画',
 	},
 ];
-
-function Activity() {
-	return (
-		<>
-			<Seo
-				title="執筆した記事や作成した動画｜Hoshimikan6490"
-				description="Hoshimikan6490が執筆した記事や作成した動画、大学や委員会での活動をまとめています。"
-				keywords={['Hoshimikan6490', '活動', '記事', '動画', 'note', 'YouTube']}
-				canonical="https://hoshimikan6490.com/activity.html"
-				openGraph={{
-					title: '執筆した記事や作成した動画｜Hoshimikan6490',
-					description:
-						'Hoshimikan6490が執筆した記事や作成した動画、大学や委員会での活動をまとめています。',
-					url: 'https://hoshimikan6490.com/activity.html',
-					image: 'https://hoshimikan6490.com/images/logo.webp',
-					type: 'website',
-					site_name: 'Hoshimikan6490',
-				}}
-				twitter={{
-					card: 'summary_large_image',
-					site: 'Hoshimikan6490🌟🍊',
-					creator: 'Hoshimikan6490🌟🍊',
-					title: '執筆した記事や作成した動画｜Hoshimikan6490',
-					description:
-						'Hoshimikan6490が執筆した記事や作成した動画、大学や委員会での活動をまとめています。',
-					image: 'https://hoshimikan6490.com/images/logo.webp',
-				}}
-			/>
-			<SiteHeader />
-
-			<main>
-				<div>
-					<h1>個人で執筆した記事</h1>
-					<div className="center_contents">
-						<ArticleGrid articles={personalArticles} />
-					</div>
-					<div className="article_buttons">
-						<a
-							href="https://note.com/hoshimikan6490"
-							className="button"
-							target="_blank"
-							rel="noopener noreferrer"
-						>
-							個人noteの記事をもっと見る
-						</a>
-						<a
-							href="https://qiita.com/Hoshimikan6490"
-							className="button"
-							target="_blank"
-							rel="noopener noreferrer"
-						>
-							個人Qiitaの記事をもっと見る
-						</a>
-					</div>
-				</div>
-				<br />
-				<div>
-					<h1>大学の委員会で執筆した記事</h1>
-					<div className="center_contents">
-						<ArticleGrid articles={committeeArticles} />
-					</div>
-				</div>
-				<br />
-				<div>
-					<h1>研究</h1>
-					<div className="waku">
-						<p>
-							私の研究や、所属する研究室についてまとめています。研究内容や研究室の雰囲気などを知りたい方はぜひご覧ください。
-						</p>
-						<div className="article_buttons" style={{ marginBottom: '15px' }}>
-							<a href="/research" className="button">
-								研究について詳しく見る
-							</a>
-						</div>
-					</div>
-				</div>
-				<br />
-				<div>
-					<h1>公開した動画</h1>
-					<div className="center_contents">
-						<ArticleGrid articles={videoArticles} />
-					</div>
-					<div className="article_buttons">
-						<a
-							href="https://kogakuintimes.com/author/hoshimikan/"
-							className="button"
-							target="_blank"
-							rel="noopener noreferrer"
-						>
-							旧チャンネルの動画をもっと見る
-						</a>
-						<a
-							href="https://kogakuintimes.com/author/hoshimikan/"
-							className="button"
-							target="_blank"
-							rel="noopener noreferrer"
-						>
-							新チャンネルの動画をもっと見る
-						</a>
-					</div>
-				</div>
-			</main>
-
-			<ReturnTopButton />
-			<PageFooter />
-		</>
-	);
-}
-
-export default Activity;

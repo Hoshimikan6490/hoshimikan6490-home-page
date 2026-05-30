@@ -1,31 +1,9 @@
-import { useEffect } from 'react';
-
 import Seo from '../components/tags/Seo';
+import SiteHeader from '../components/layout/SiteHeader';
+import ReturnTopButton from '../components/layout/ReturnTopButton';
+import PageFooter from '../components/layout/PageFooter';
 
 function Research() {
-	useEffect(() => {
-		const returnTop = document.getElementById('return_top');
-		if (!returnTop) {
-			return;
-		}
-
-		const handleScroll = () => {
-			returnTop.classList.toggle('active', window.scrollY >= 100);
-		};
-
-		handleScroll();
-		window.addEventListener('scroll', handleScroll);
-
-		return () => {
-			window.removeEventListener('scroll', handleScroll);
-		};
-	}, []);
-
-	const handleReturnTop = (event) => {
-		event.preventDefault();
-		window.scrollTo({ top: 0, behavior: 'smooth' });
-	};
-
 	return (
 		<>
 			<Seo
@@ -50,30 +28,7 @@ function Research() {
 					image: 'https://hoshimikan6490.com/images/logo.webp',
 				}}
 			/>
-			<header>
-				<div className="headerContents">
-					<div className="headerLeft">
-						<a href="/" rel="noreferrer">
-							<img src="/logo.webp" alt="私のアイコン" className="myIcon" />
-							<div className="Myname">
-								<p>Hoshimikan6490</p>
-							</div>
-						</a>
-					</div>
-					<div className="headerRight">
-						<a
-							href="https://github.com/Hoshimikan6490/hoshimikan6490-home-page"
-							target="_blank"
-							rel="noopener noreferrer"
-						>
-							<img
-								alt="このWebサイトのプログラムが見られるボタン"
-								src="https://img.shields.io/badge/View%20on%20Github-grey?style=for-the-badge&logo=github"
-							/>
-						</a>
-					</div>
-				</div>
-			</header>
+			<SiteHeader showRealName={false} />
 
 			<main>
 				<div>
@@ -110,13 +65,8 @@ function Research() {
 				</div>
 			</main>
 
-			<a id="return_top" href="#" className="button" onClick={handleReturnTop}>
-				▲TOPへ戻る
-			</a>
-
-			<footer>
-				<small>© Hoshimikan6490 2026</small>
-			</footer>
+			<ReturnTopButton />
+			<PageFooter />
 		</>
 	);
 }

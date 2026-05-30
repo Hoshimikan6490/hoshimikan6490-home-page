@@ -1,6 +1,11 @@
 import { useEffect } from 'react';
 
 import Seo from '../components/tags/Seo';
+import SiteHeader from '../components/layout/SiteHeader';
+import ReturnTopButton from '../components/layout/ReturnTopButton';
+import PageFooter from '../components/layout/PageFooter';
+import ArticleGrid from '../components/content/ArticleGrid';
+import TimelineTable from '../components/content/TimelineTable';
 import twitterLogo from '../assets/sns_logo/twitter_logo.svg';
 import instagramLogo from '../assets/sns_logo/instagram_logo.svg';
 import youtubeLogo from '../assets/sns_logo/youtube_logo.svg';
@@ -192,30 +197,10 @@ function Home() {
 		script.src = '//cdn.credly.com/assets/utilities/embed.js';
 		document.body.appendChild(script);
 
-		const returnTop = document.getElementById('return_top');
-		if (!returnTop) {
-			return () => {
-				script.remove();
-			};
-		}
-
-		const handleScroll = () => {
-			returnTop.classList.toggle('active', window.scrollY >= 100);
-		};
-
-		handleScroll();
-		window.addEventListener('scroll', handleScroll);
-
 		return () => {
-			window.removeEventListener('scroll', handleScroll);
 			script.remove();
 		};
 	}, []);
-
-	const handleReturnTop = (event) => {
-		event.preventDefault();
-		window.scrollTo({ top: 0, behavior: 'smooth' });
-	};
 
 	return (
 		<>
@@ -250,37 +235,7 @@ function Home() {
 					image: 'https://hoshimikan6490.com/images/logo.webp',
 				}}
 			/>
-			<header>
-				<div className="headerContents">
-					<div className="headerLeft">
-						<a href="/" rel="noreferrer">
-							<img
-								src="/logo.webp"
-								alt="私のアイコン"
-								className="myIcon"
-								loading="eager"
-								fetchPriority="high"
-							/>
-							<div className="Myname">
-								<p>Hoshimikan6490</p>
-								<small className="realName">（三上隆也）</small>
-							</div>
-						</a>
-					</div>
-					<div className="headerRight">
-						<a
-							href="https://github.com/Hoshimikan6490/hoshimikan6490-home-page"
-							target="_blank"
-							rel="noopener noreferrer"
-						>
-							<img
-								alt="このWebサイトのプログラムが見られるボタン"
-								src="https://img.shields.io/badge/View%20on%20Github-grey?style=for-the-badge&logo=github"
-							/>
-						</a>
-					</div>
-				</div>
-			</header>
+			<SiteHeader logoProps={{ loading: 'eager', fetchPriority: 'high' }} />
 
 			<main>
 				<div className="section">
@@ -417,25 +372,7 @@ function Home() {
 				<div className="section">
 					<h1>執筆した記事などの活動実績(アクセス数の多い順)</h1>
 					<div className="center_contents">
-						<div className="articles">
-							{personalArticles.slice(0, 4).map((article) => (
-								<a
-									key={article.href}
-									href={article.href}
-									target="_blank"
-									rel="noopener noreferrer"
-								>
-									<div className="article">
-										<h2>{article.title}</h2>
-										<img
-											src={article.image}
-											alt={article.alt}
-											style={{ width: '100%' }}
-										/>
-									</div>
-								</a>
-							))}
-						</div>
+						<ArticleGrid articles={personalArticles.slice(0, 4)} />
 					</div>
 					<div className="article_buttons">
 						<a href="/activity" className="button">
@@ -447,49 +384,7 @@ function Home() {
 				<div className="section">
 					<h1>経歴(受賞やプロジェクト発足等)</h1>
 					<div className="waku">
-						<table className="timeline">
-							<tbody>
-								{timelineRows.map((row) => (
-									<tr key={row.date}>
-										<td className="time">
-											<p>{row.date}</p>
-											{row.href ? (
-												<a
-													href={row.href}
-													target="_blank"
-													rel="noopener noreferrer"
-													className="mobile_link"
-												>
-													これについて見る
-													<img src={urlOpen} alt="外部リンクを開く" />
-												</a>
-											) : (
-												<a href="" className="non_URL mobile_link">
-													これについて見る
-													<img src={urlOpen} alt="外部リンクを開く" />
-												</a>
-											)}
-										</td>
-										<td>{row.description}</td>
-										<td className="url">
-											{row.href ? (
-												<a
-													href={row.href}
-													target="_blank"
-													rel="noopener noreferrer"
-												>
-													これについて見る(外部URL)
-												</a>
-											) : (
-												<a href="" className="non_URL">
-													これについて見る(外部URL)
-												</a>
-											)}
-										</td>
-									</tr>
-								))}
-							</tbody>
-						</table>
+						<TimelineTable rows={timelineRows} />
 					</div>
 				</div>
 
@@ -539,13 +434,8 @@ function Home() {
 				</div>
 			</main>
 
-			<a id="return_top" href="#" className="button" onClick={handleReturnTop}>
-				▲TOPへ戻る
-			</a>
-
-			<footer>
-				<small>© Hoshimikan6490 2026</small>
-			</footer>
+			<ReturnTopButton />
+			<PageFooter />
 		</>
 	);
 }
