@@ -221,6 +221,10 @@ a.non_URL img {
   text-align: center;
 }
 
+.article_buttons a {
+  margin: 10px 10px;
+}
+
 table {
   font-size: larger;
 }
