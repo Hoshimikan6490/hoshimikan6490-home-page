@@ -28,7 +28,7 @@ function Research() {
 					image: 'https://hoshimikan6490.com/images/logo.webp',
 				}}
 			/>
-			<SiteHeader showRealName={false} />
+			<SiteHeader />
 
 			<main>
 				<div>

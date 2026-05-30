@@ -1,4 +1,4 @@
-export default function SiteHeader({ showRealName = true, logoProps = {} }) {
+export default function SiteHeader({ logoProps = {} }) {
 	return (
 		<header>
 			<div className="headerContents">
@@ -12,9 +12,7 @@ export default function SiteHeader({ showRealName = true, logoProps = {} }) {
 						/>
 						<div className="Myname">
 							<p>Hoshimikan6490</p>
-							{showRealName ? (
-								<small className="realName">（三上隆也）</small>
-							) : null}
+							<small className="realName">（三上隆也）</small>
 						</div>
 					</a>
 				</div>
