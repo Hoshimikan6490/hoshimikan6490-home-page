@@ -138,7 +138,8 @@ function Activity() {
 				canonical="https://hoshimikan6490.com/activity.html"
 				openGraph={{
 					title: '執筆した記事や作成した動画｜Hoshimikan6490',
-					description: 'Hoshimikan6490が執筆した記事や作成した動画、大学や委員会での活動をまとめています。',
+					description:
+						'Hoshimikan6490が執筆した記事や作成した動画、大学や委員会での活動をまとめています。',
 					url: 'https://hoshimikan6490.com/activity.html',
 					image: 'https://hoshimikan6490.com/images/logo.webp',
 					type: 'website',
@@ -149,7 +150,8 @@ function Activity() {
 					site: 'Hoshimikan6490🌟🍊',
 					creator: 'Hoshimikan6490🌟🍊',
 					title: '執筆した記事や作成した動画｜Hoshimikan6490',
-					description: 'Hoshimikan6490が執筆した記事や作成した動画、大学や委員会での活動をまとめています。',
+					description:
+						'Hoshimikan6490が執筆した記事や作成した動画、大学や委員会での活動をまとめています。',
 					image: 'https://hoshimikan6490.com/images/logo.webp',
 				}}
 			/>
@@ -256,12 +258,7 @@ function Activity() {
 							私の研究や、所属する研究室についてまとめています。研究内容や研究室の雰囲気などを知りたい方はぜひご覧ください。
 						</p>
 						<div className="article_buttons" style={{ marginBottom: '15px' }}>
-							<a
-								href="/research"
-								className="button"
-								target="_blank"
-								rel="noopener noreferrer"
-							>
+							<a href="/research" className="button">
 								研究について詳しく見る
 							</a>
 						</div>
