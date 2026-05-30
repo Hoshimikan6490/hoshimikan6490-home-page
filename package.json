@@ -1,15 +1,22 @@
 {
-	"name": "hoshimikan6490-home-page",
-	"version": "1.0.0",
-	"description": "https://hoshimikan6490.com/",
+	"name": "hoshimikan-home-page",
+	"version": "2.0.0",
+	"description": "",
+	"license": "ISC",
+	"author": "",
+	"type": "commonjs",
 	"main": "index.js",
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"dev": "vite",
+		"build": "vite build"
 	},
-	"author": "",
-	"license": "ISC",
 	"dependencies": {
-		"compression": "^1.8.1",
-		"express": "^5.2.1"
+		"@vitejs/plugin-react": "^6.0.2",
+		"react": "^19.2.6",
+		"react-dom": "^19.2.6",
+		"vite": "^8.0.14"
+	},
+	"devDependencies": {
+		"@types/react": "^19.2.15"
 	}
 }
