@@ -222,11 +222,19 @@ function Home() {
 			<Seo
 				title="ホーム｜Hoshimikan6490"
 				description="Hoshimikan6490の個人サイト。プロフィール、活動、作成物、連絡先をまとめたポートフォリオです。"
-				keywords={['Hoshimikan6490', 'プログラミング', 'ポートフォリオ', '活動', '作成物', 'JavaScript']}
+				keywords={[
+					'Hoshimikan6490',
+					'プログラミング',
+					'ポートフォリオ',
+					'活動',
+					'作成物',
+					'JavaScript',
+				]}
 				canonical="https://hoshimikan6490.com/"
 				openGraph={{
 					title: 'ホーム｜Hoshimikan6490',
-					description: 'Hoshimikan6490の個人サイト。プロフィール、活動、作成物、連絡先をまとめたポートフォリオです。',
+					description:
+						'Hoshimikan6490の個人サイト。プロフィール、活動、作成物、連絡先をまとめたポートフォリオです。',
 					url: 'https://hoshimikan6490.com/',
 					image: 'https://hoshimikan6490.com/images/logo.webp',
 					type: 'website',
@@ -237,7 +245,8 @@ function Home() {
 					site: 'Hoshimikan6490🌟🍊',
 					creator: 'Hoshimikan6490🌟🍊',
 					title: 'ホーム｜Hoshimikan6490',
-					description: 'Hoshimikan6490の個人サイト。プロフィール、活動、作成物、連絡先をまとめたポートフォリオです。',
+					description:
+						'Hoshimikan6490の個人サイト。プロフィール、活動、作成物、連絡先をまとめたポートフォリオです。',
 					image: 'https://hoshimikan6490.com/images/logo.webp',
 				}}
 			/>
@@ -245,7 +254,13 @@ function Home() {
 				<div className="headerContents">
 					<div className="headerLeft">
 						<a href="/" rel="noreferrer">
-							<img src="/logo.webp" alt="私のアイコン" className="myIcon" />
+							<img
+								src="/logo.webp"
+								alt="私のアイコン"
+								className="myIcon"
+								loading="eager"
+								fetchPriority="high"
+							/>
 							<div className="Myname">
 								<p>Hoshimikan6490</p>
 								<small className="realName">（三上隆也）</small>
@@ -271,7 +286,12 @@ function Home() {
 				<div className="section">
 					<h1>プロフィール</h1>
 					<div className="center_contents" style={{ paddingBottom: '20px' }}>
-						<img src="/logo.webp" alt="私のアイコン" />
+						<img
+							src="/logo.webp"
+							alt="私のアイコン"
+							loading="eager"
+							fetchPriority="high"
+						/>
 						<div style={{ marginLeft: '20px' }}>
 							<h1 style={{ textAlign: 'center' }}>Hoshimikan6490</h1>
 							<div className="sns_logos">
