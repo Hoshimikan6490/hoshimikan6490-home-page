@@ -210,7 +210,7 @@ a.button:hover {
 
 a.non_URL {
   pointer-events: none;
-  color: gray;
+  color: #606060;
 }
 
 a.non_URL img {
