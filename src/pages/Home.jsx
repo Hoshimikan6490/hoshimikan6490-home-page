@@ -11,7 +11,8 @@ import instagramLogo from '../assets/sns_logo/instagram_logo.svg';
 import youtubeLogo from '../assets/sns_logo/youtube_logo.svg';
 import noteLogo from '../assets/sns_logo/note_logo.svg';
 import qiitaLogo from '../assets/sns_logo/qiita_logo.svg';
-import dataScienceBadge from '../assets/badge/dataScienceBadge.webp';
+import dataScienceLiteracyBadge from '../assets/badge/dataScienceBadge_literacyLevel.webp';
+import dataScienceAppliedBasicBadge from '../assets/badge/dataScienceBadge_appliedBasicLevel.png';
 import urlOpen from '../assets/url_open.webp';
 import makecodeThumb from '../assets/note_thumbnail/how-to-make-tijoe.webp';
 import discordAnnounceThumb from '../assets/note_thumbnail/What-is-discord_announce_channel.webp';
@@ -395,13 +396,22 @@ function Home() {
 							href="https://www.openbadge-global.com/api/v1.0/openBadge/v2/Wallet/Public/GetAssertionShare/NWJCalc2S3Y5MWY5UzJJU2ZtRDEyUT09"
 							target="_blank"
 							rel="noopener noreferrer"
-							className="dataScienceBadge"
 						>
 							<img
-								src={dataScienceBadge}
-								alt="データサイエンスバッジ"
-								className="dataScienceBadgeImage"
-								style={{ width: '100%', height: '100%' }}
+								src={dataScienceLiteracyBadge}
+								alt="工学院大学数理・データサイエンス・ＡＩ教育プログラム（リテラシーレベル）のバッジ"
+								className="dataScienceBadge"
+							/>
+						</a>
+						<a
+							href="https://www.openbadge-global.com/api/v1.0/openBadge/v2/Wallet/Public/GetAssertionShare/OVlySUlwNER5bDROejMrUmo4V1lKUT09"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							<img
+								src={dataScienceAppliedBasicBadge}
+								alt="工学院大学数理・データサイエンス・ＡＩ教育プログラム（応用基礎レベル）のバッジ"
+								className="dataScienceBadge"
 							/>
 						</a>
 						<div
