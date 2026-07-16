@@ -170,8 +170,8 @@ const timelineRows = [
 	},
 	{
 		date: '2020/10/23',
-		description: 'Planet-Bot-Project発足（URL準備中）',
-		href: null,
+		description: 'Planet-Bot-Project発足',
+		href: 'https://HoshimiTech.hoshimikan6490.com',
 	},
 	{
 		date: '2021/02/21',
@@ -186,8 +186,8 @@ const timelineRows = [
 	},
 	{
 		date: '2026/04/18',
-		description: 'Planet-Bot-ProjectからHoshimiTechへ名称変更（URL準備中）',
-		href: null,
+		description: 'Planet-Bot-ProjectからHoshimiTechへ名称変更',
+		href: 'https://HoshimiTech.hoshimikan6490.com',
 	},
 ];
 
