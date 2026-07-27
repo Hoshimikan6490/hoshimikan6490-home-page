@@ -427,13 +427,20 @@ function Home() {
 					<h1>連絡先</h1>
 					<div className="waku">
 						<p>
-							プロフィール欄のSNSアカウントまたは、以下のフォームからご連絡ください。
+							プロフィール欄のSNSアカウントへのDMにてご連絡ください。それが難しい場合は、メールまたはお問い合わせフォームからご連絡ください。
 						</p>
 						<div className="article_buttons" style={{ paddingBottom: '10px' }}>
 							<a
+								href="mailto:contact@hoshimikan6490.com"
+								className="button"
+								style={{ width: '40%' }}
+							>
+								メールを送る
+							</a>
+							<a
 								href="https://forms.gle/RdmYzA9MEHGsPB839"
 								className="button"
-								style={{ width: '75%' }}
+								style={{ width: '40%' }}
 								target="_blank"
 								rel="noopener noreferrer"
 							>
