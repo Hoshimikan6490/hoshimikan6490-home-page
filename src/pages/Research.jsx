@@ -32,16 +32,33 @@ function Research() {
 
 			<main>
 				<div>
-					<h1>研究室の話</h1>
+					<h1>簡単な自己紹介と研究に関して</h1>
 					<div className="section">
-						<div className="waku">
-							<h2>私と私の研究について</h2>
+						<div className="waku" style={{ paddingBottom: '20px' }}>
+							<h2>私について</h2>
 							<p>
 								　三上隆也と申します。工学院大学情報学部情報通信工学科4年生です。結構興味のある分野は広く浅くではありますが、研究では「情報指向型ネットワーク(ICN)」について研究しています。
 								<br />
 								　ちなみに、Discord
 								BOTやWebアプリの開発、技術記事執筆が趣味です。ゲームだと、Splatoon
 								3やMinecraftなどをやっていましたが、最近はSteamゲームにお熱です(?)。
+							</p>
+							<a
+								href="/"
+								className="button"
+								style={{ width: '100%', padding: '12.5px 0px' }}
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								私についてはこちら
+							</a>
+						</div>
+					</div>
+					<div className="section">
+						<div className="waku">
+							<h2>研究内容</h2>
+							<p>
+								　私の研究は「情報指向型ネットワーク(ICN)」に関する研究をしています。
 							</p>
 						</div>
 					</div>
@@ -60,6 +77,33 @@ function Research() {
 							>
 								研究室についてはこちら
 							</a>
+						</div>
+					</div>
+					<div className="section">
+						<h1>連絡先</h1>
+						<div className="waku">
+							<p>メールまたはお問い合わせフォームからご連絡ください。</p>
+							<div
+								className="article_buttons"
+								style={{ paddingBottom: '10px' }}
+							>
+								<a
+									href="mailto:contact@hoshimikan6490.com"
+									className="button"
+									style={{ width: '40%' }}
+								>
+									メールを送る
+								</a>
+								<a
+									href="https://forms.gle/RdmYzA9MEHGsPB839"
+									className="button"
+									style={{ width: '40%' }}
+									target="_blank"
+									rel="noopener noreferrer"
+								>
+									お問い合わせフォームへ
+								</a>
+							</div>
 						</div>
 					</div>
 				</div>
