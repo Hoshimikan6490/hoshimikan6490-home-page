@@ -1,3 +1,6 @@
+// HTML として 200 を返してよいページ（/docs/api は静的な API ドキュメント）
+const KNOWN_PAGES = ['/', '/activity', '/research', '/docs/api'];
+
 export async function onRequest(context) {
 	const originalUrl = context.request.url;
 	const url = new URL(originalUrl);
@@ -111,22 +114,19 @@ export async function onRequest(context) {
 	if (
 		wantsMarkdown &&
 		(url.pathname === '/' ||
-			url.pathname === '/index.html' ||
 			url.pathname === '/activity' ||
-			url.pathname === '/activity.html' ||
 			url.pathname === '/research' ||
-			url.pathname === '/research.html' ||
 			url.pathname === '/docs/api')
 	) {
-		if (url.pathname === '/' || url.pathname === '/index.html') {
+		if (url.pathname === '/') {
 			return markdownResponse(homeMarkdown());
 		}
 
-		if (url.pathname === '/activity' || url.pathname === '/activity.html') {
+		if (url.pathname === '/activity') {
 			return markdownResponse(activityMarkdown());
 		}
 
-		if (url.pathname === '/research' || url.pathname === '/research.html') {
+		if (url.pathname === '/research') {
 			return markdownResponse(researchMarkdown());
 		}
 
@@ -135,15 +135,39 @@ export async function onRequest(context) {
 		}
 	}
 
+	// それ以外のリクエストはそのまま次のミドルウェアやルートハンドラーに渡す
 	const response = await context.next();
-	if (url.pathname === '/' || url.pathname === '/index.html') {
-		const headers = new Headers(response.headers);
-		headers.set('Link', homepageLinkHeader);
-		return new Response(await response.blob(), {
-			status: response.status,
-			statusText: response.statusText,
+	const headers = new Headers(response.headers);
+	headers.set('Link', homepageLinkHeader);
+
+	// SPA フォールバックにより存在しないパスでも index.html が 200 で返るため、
+	// 公開しているページ以外で HTML が返ってきた場合は 404 に書き換える
+	// （本文は index.html のままで、クライアント側で 404 ページが描画される）
+	const contentType = response.headers.get('Content-Type') || '';
+	const isKnownPage = KNOWN_PAGES.includes(url.pathname);
+	const isFallbackHtml =
+		response.status === 200 &&
+		contentType.includes('text/html') &&
+		!isKnownPage;
+	if (isFallbackHtml) {
+		// 404 ページとして明示（ソフト404対策: ステータス・title・noindex を揃える）
+		headers.set('Cache-Control', 'no-store');
+		headers.set('X-Robots-Tag', 'noindex');
+		headers.delete('Content-Length');
+		headers.delete('ETag');
+		const html = (await response.text())
+			.replace(/<title>[\s\S]*?<\/title>/i, '<title>404 Not Found｜Hoshimikan6490</title>')
+			.replace('</head>', '<meta name="robots" content="noindex" /></head>');
+		return new Response(html, {
+			status: 404,
+			statusText: 'Not Found',
 			headers,
 		});
 	}
-	return response;
+
+	return new Response(await response.blob(), {
+		status: response.status,
+		statusText: response.statusText,
+		headers,
+	});
 }
